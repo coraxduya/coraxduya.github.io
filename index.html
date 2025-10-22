@@ -6,6 +6,7 @@
     <title>Lumine: A Generalist Agent for 3D Open-Worlds</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="i18n.js" defer></script>
     <script src="theme.js" defer></script>
 </head>
 <body>
@@ -15,9 +16,9 @@
                 <span class="logo">Lumine</span>
             </div>
             <div class="nav-center">
-                <a href="#" class="nav-link">Research</a>
-                <a href="#" class="nav-link">Video</a>
-                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link" data-i18n="nav.research">Research</a>
+                <a href="#" class="nav-link" data-i18n="nav.video">Video</a>
+                <a href="#" class="nav-link" data-i18n="nav.about">About</a>
             </div>
             <div class="nav-right">
 <!--                 <div class="search-box">
@@ -27,7 +28,7 @@
                 <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
                     <span class="theme-icon">🌙</span>
                 </button>
-                <button class="try-gemini-btn">Try Lumine</button>
+                <button class="try-gemini-btn" data-i18n="nav.try-lumine">Try Lumine</button>
             </div>
         </nav>
     </header>
@@ -36,14 +37,14 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="breadcrumb">
-                    <span>RESEARCH</span>
+                    <span data-i18n="breadcrumb.research">RESEARCH</span>
                 </div>
-                <h1 class="hero-title">Lumine: A Generalist Agent for 3D Open-Worlds</h1>
+                <h1 class="hero-title" data-i18n="hero.title">Lumine: A Generalist Agent for 3D Open-Worlds</h1>
                 <div class="hero-meta">
-                    <span class="date">Published 2025</span>
+                    <span class="date" data-i18n="hero.published">Published 2025</span>
                     <div class="authors">
-                        <span>By</span>
-                        <a href="#" class="author-link">Lumine Team</a>
+                        <span data-i18n="hero.by">By</span>
+                        <a href="#" class="author-link" data-i18n="hero.author">Lumine Team</a>
                     </div>
                 </div>
             </div>
@@ -84,56 +85,56 @@
 
         <section class="content">
             <div class="content-wrapper">
-                <p class="intro-text">
+                <p class="intro-text" data-i18n="intro.text">
                     Building generalist autonomous agents that can perceive, reason, and act at human-level in open worlds is a key goal of artificial general intelligence (AGI) research. Lumine addresses this gap by integrating foundation models with embodied interaction, enabling real-time, long-horizon task completion in complex 3D open-world games.
                 </p>
                 
-                <h2 class="section-subtitle">1. Background</h2>
-                <p>
+                <h2 class="section-subtitle" data-i18n="section.background">1. Background</h2>
+                <p data-i18n="background.text">
                     Traditional agents excel in closed, rule-fixed environments (e.g., Go, Dota II) but lack generalization to ambiguous, unbounded 3D open worlds. Lumine addresses this gap by integrating foundation models with embodied interaction, enabling real-time, long-horizon task completion in complex 3D open-world games.
                 </p>
 
-                <h2 class="section-subtitle">2. Core Output</h2>
-                <p>
+                <h2 class="section-subtitle" data-i18n="section.core-output">2. Core Output</h2>
+                <p data-i18n="core-output.intro">
                     Lumine is the first generalist Vision-Language-Action (VLA) agent capable of completing hour-long tasks in complex 3D open-world environments (e.g., Genshin Impact) in real time. Its key achievements include:
                 </p>
                 
                 <ul class="achievement-list">
-                    <li><strong>Real-time performance:</strong> Processes raw pixel inputs at 5 FPS and generates executable keyboard-mouse actions at 30 FPS, matching human speed.</li>
-                    <li><strong>Long-horizon task completion:</strong> Finishes the 1-hour Genshin Impact Mondstadt main storyline independently, even outperforming new human players (58 minutes vs. average 78 minutes).</li>
-                    <li><strong>Cross-game generalization:</strong> Without additional training, adapts to unseen games like Honkai: Star Rail, Wuthering Waves, and Black Myth: Wukong, completing their initial main missions.</li>
-                    <li><strong>Unified capability integration:</strong> Combines perception, high-level planning, low-level control, memory, and adaptive reasoning—overcoming fragmentation in traditional agent designs.</li>
+                    <li><strong data-i18n="achievement.realtime">Real-time performance:</strong> <span data-i18n="achievement.realtime-desc">Processes raw pixel inputs at 5 FPS and generates executable keyboard-mouse actions at 30 FPS, matching human speed.</span></li>
+                    <li><strong data-i18n="achievement.longhorizon">Long-horizon task completion:</strong> <span data-i18n="achievement.longhorizon-desc">Finishes the 1-hour Genshin Impact Mondstadt main storyline independently, even outperforming new human players (58 minutes vs. average 78 minutes).</span></li>
+                    <li><strong data-i18n="achievement.crossgame">Cross-game generalization:</strong> <span data-i18n="achievement.crossgame-desc">Without additional training, adapts to unseen games like Honkai: Star Rail, Wuthering Waves, and Black Myth: Wukong, completing their initial main missions.</span></li>
+                    <li><strong data-i18n="achievement.unified">Unified capability integration:</strong> <span data-i18n="achievement.unified-desc">Combines perception, high-level planning, low-level control, memory, and adaptive reasoning—overcoming fragmentation in traditional agent designs.</span></li>
                 </ul>
 
-                <h2 class="section-subtitle">3. Methodology</h2>
-                <p>
+                <h2 class="section-subtitle" data-i18n="section.methodology">3. Methodology</h2>
+                <p data-i18n="methodology.intro">
                     Lumine is built on the Qwen2-VL foundation model and developed via a scalable, three-stage framework, with optimizations for real-time inference.
                 </p>
 
-                <h3 class="subsection-title">3.1 Foundational Architecture</h3>
+                <h3 class="subsection-title" data-i18n="subsection.architecture">3.1 Foundational Architecture</h3>
                 <p>
-                    <strong>Input-output:</strong> Takes raw screen pixels (720p resolution) and text instructions as input; outputs autoregressive keyboard-mouse actions (via a unified language-action vocabulary) and optional "inner monologue" (reasoning traces) when needed.
+                    <strong data-i18n="architecture.input-output">Input-output:</strong> <span data-i18n="architecture.input-output-desc">Takes raw screen pixels (720p resolution) and text instructions as input; outputs autoregressive keyboard-mouse actions (via a unified language-action vocabulary) and optional "inner monologue" (reasoning traces) when needed.</span>
                 </p>
                 <p>
-                    <strong>Hybrid reasoning:</strong> Dynamically balances explicit reasoning (for complex decisions like puzzle-solving) and direct action (for routine tasks like navigation), avoiding inefficiency from step-by-step reasoning.
+                    <strong data-i18n="architecture.hybrid">Hybrid reasoning:</strong> <span data-i18n="architecture.hybrid-desc">Dynamically balances explicit reasoning (for complex decisions like puzzle-solving) and direct action (for routine tasks like navigation), avoiding inefficiency from step-by-step reasoning.</span>
                 </p>
 
-                <h3 class="subsection-title">3.2 Three-Stage Training Pipeline</h3>
-                <p>
+                <h3 class="subsection-title" data-i18n="subsection.training">3.2 Three-Stage Training Pipeline</h3>
+                <p data-i18n="training.intro">
                     Training leverages 2424 hours of curated Genshin Impact gameplay data, following a curriculum that builds skills incrementally:
                 </p>
                 
                 <ul class="training-stages">
-                    <li><strong>Behavior Cloning (1731 hours):</strong> Teaches basic action primitives (e.g., navigation, object interaction, combat) by imitating human gameplay, filtering out idle or noisy actions.</li>
-                    <li><strong>Classifier-Augmented Instruction Following (200 hours):</strong> Aligns actions with natural language. A Qwen2-VL-based classifier auto-labels gameplay segments (from 165 hours of human-annotated data), then refines labels via GPT-4.1 to create high-quality instruction-data pairs.</li>
-                    <li><strong>Human-Annotated Reasoning Fine-Tuning (15 hours):</strong> Integrates 19K reasoning traces (aligned with 300K action frames) to teach adaptive decision-making, enabling Lumine to generate "inner monologue" for long-horizon tasks.</li>
+                    <li><strong data-i18n="training.behavior">Behavior Cloning (1731 hours):</strong> <span data-i18n="training.behavior-desc">Teaches basic action primitives (e.g., navigation, object interaction, combat) by imitating human gameplay, filtering out idle or noisy actions.</span></li>
+                    <li><strong data-i18n="training.classifier">Classifier-Augmented Instruction Following (200 hours):</strong> <span data-i18n="training.classifier-desc">Aligns actions with natural language. A Qwen2-VL-based classifier auto-labels gameplay segments (from 165 hours of human-annotated data), then refines labels via GPT-4.1 to create high-quality instruction-data pairs.</span></li>
+                    <li><strong data-i18n="training.reasoning">Human-Annotated Reasoning Fine-Tuning (15 hours):</strong> <span data-i18n="training.reasoning-desc">Integrates 19K reasoning traces (aligned with 300K action frames) to teach adaptive decision-making, enabling Lumine to generate "inner monologue" for long-horizon tasks.</span></li>
                 </ul>
             </div>
         </section>
 
         <section class="video-games-section">
             <div class="content-wrapper">
-                <h2 class="section-title">Lumine in Action: 3D Open-World Games</h2>
+                <h2 class="section-title" data-i18n="games.title">Lumine in Action: 3D Open-World Games</h2>
                 
                 <div class="games-grid">
                     <div class="game-item">
@@ -186,15 +187,15 @@
                     </div>
                 </div>
 
-                <p class="games-description">
+                <p class="games-description" data-i18n="games.description">
                     Lumine demonstrates exceptional performance across multiple 3D open-world games, achieving human-level or superior task completion rates.
                 </p>
 
-                <p>
+                <p data-i18n="games.generalization">
                     The agent's ability to generalize across different game environments without additional training represents a significant breakthrough in embodied AI research. From completing complex main storylines in Genshin Impact to adapting to entirely new game mechanics in Black Myth: Wukong, Lumine showcases the potential for truly generalist AI agents.
                 </p>
 
-                <p>
+                <p data-i18n="games.conclusion">
                     This cross-game adaptability, combined with real-time performance capabilities, positions Lumine as a foundational step toward artificial general intelligence in interactive 3D environments. The research demonstrates that foundation models can be effectively adapted for complex, long-horizon tasks that require both strategic planning and precise motor control.
                 </p>
             </div>
