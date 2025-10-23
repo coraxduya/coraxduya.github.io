@@ -716,3 +716,9 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px var(--shadow-heavy);
 }
+
+#main-video-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+}
